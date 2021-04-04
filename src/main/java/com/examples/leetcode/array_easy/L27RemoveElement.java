@@ -5,11 +5,21 @@ public class L27RemoveElement {
 
     public int removeElement(int[] nums, int val) {
         int index = 0;
-        for (int i = 1; i < nums.length; ++i) {
-            if (nums[i] != val && i != index) {
+        for (int i = 0; i < nums.length; ++i) {
+            if (nums[i] != val) {
                 nums[index++] = nums[i];
             }
         }
-        return index;
+        return index + 1;
+    }
+
+    public int removeElement2(int[] nums, int val) {
+        int index = nums.length - 1;
+        for (int i = 0; i < index + 1; ++i) {
+            if (nums[i] == val) {
+                nums[i--] = nums[index--];
+            }
+        }
+        return index + 1;
     }
 }

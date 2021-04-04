@@ -324,6 +324,15 @@ public class ArrayEasyTests {
     }
 
     @Test
+    public void testL1013PartitionArrayIntoThreePartsWithEqualSum() {
+        int[] nums = {3, 3, 6, 5, -2, 2, 5, 1, -9, 4};
+        boolean res =
+                new L1013PartitionArrayIntoThreePartsWithEqualSum().canThreePartsEqualSum(nums);
+        boolean expected = true;
+        Assert.assertEquals(res, expected);
+    }
+
+    @Test
     public void testL1051HeightChecker() {
         int[] nums = {1, 1, 4, 2, 1, 3};
         int res = new L1051HeightChecker().heightChecker(nums);
