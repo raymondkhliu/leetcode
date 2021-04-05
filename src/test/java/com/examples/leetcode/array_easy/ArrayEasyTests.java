@@ -209,6 +209,13 @@ public class ArrayEasyTests {
     }
 
     @Test
+    public void testL724FindPivotIndex() {
+        int[] nums = {2, 1, -1};
+        int res = new L724FindPivotIndex().pivotIndex2(nums);
+        Assert.assertEquals(res, 0);
+    }
+
+    @Test
     public void testL746MinCostClimbingStairs() {
         int[] cost = {1, 100, 1, 1, 1, 100, 1, 1, 100, 1};
         int res = new L746MinCostClimbingStairs().minCostClimbingStairs(cost);
@@ -297,7 +304,6 @@ public class ArrayEasyTests {
     public void testL985SumOfEvenNumbersAfterQueries() {
         int[] nums = {1, 2, 3, 4};
         int[][] queries = {{1, 0}, {-3, 1}, {-4, 0}, {2, 3}};
-
         int[] res = new L985SumOfEvenNumbersAfterQueries().sumEvenAfterQueries(nums, queries);
         int[] expected = {8, 6, 2, 4};
         Assert.assertEquals(res, expected);
