@@ -1,5 +1,6 @@
 package com.examples.leetcode.array_easy;
 
+/** https://leetcode.com/problems/find-pivot-index/ */
 public class L724FindPivotIndex {
     public int pivotIndex(int[] nums) {
         int sum = 0;

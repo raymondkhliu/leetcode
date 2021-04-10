@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/** https://leetcode.com/problems/positions-of-large-groups/ */
 public class L830PositionsOfLargeGroups {
     public List<List<Integer>> largeGroupPositions(String s) {
         List<List<Integer>> lists = new ArrayList<>();

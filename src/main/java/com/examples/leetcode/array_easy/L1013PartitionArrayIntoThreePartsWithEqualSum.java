@@ -1,5 +1,6 @@
 package com.examples.leetcode.array_easy;
 
+/** https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum/ */
 public class L1013PartitionArrayIntoThreePartsWithEqualSum {
     public boolean canThreePartsEqualSum(int[] arr) {
         int total = 0;

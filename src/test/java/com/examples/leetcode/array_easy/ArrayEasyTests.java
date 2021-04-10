@@ -17,9 +17,9 @@ public class ArrayEasyTests {
     }
 
     @Test
-    public void testL26RemoveDuplicates() {
+    public void testL26RemoveDuplicatesFromSortedArray() {
         int[] nums = {1, 1, 2};
-        int res = new L26RemoveDuplicates().removeDuplicates(nums);
+        int res = new L26RemoveDuplicatesFromSortedArray().removeDuplicates(nums);
         Assert.assertEquals(res, 2);
     }
 
@@ -188,9 +188,9 @@ public class ArrayEasyTests {
 
     @Test
     public void testL628MaximumProductOfThreeNumbers() {
-        int[] nums = {1, 2, 3};
-        int res = new L628MaximumProductOfThreeNumbers().maximumProduct(nums);
-        Assert.assertEquals(res, 6);
+        int[] nums = {1, 2, 3, 4};
+        int res = new L628MaximumProductOfThreeNumbers().maximumProduct3(nums);
+        Assert.assertEquals(res, 24);
     }
 
     @Test
@@ -206,6 +206,13 @@ public class ArrayEasyTests {
         int[] nums = {1, 2, 2, 3, 1};
         int res = new L697DegreeOfAnArray().findShortestSubArray(nums);
         Assert.assertEquals(res, 2);
+    }
+
+    @Test
+    public void testL717BitCharacters() {
+        int[] nums = {1, 1, 1, 0};
+        boolean res = new L717BitCharacters().isOneBitCharacter(nums);
+        Assert.assertEquals(res, false);
     }
 
     @Test
@@ -335,6 +342,20 @@ public class ArrayEasyTests {
         boolean res =
                 new L1013PartitionArrayIntoThreePartsWithEqualSum().canThreePartsEqualSum(nums);
         boolean expected = true;
+        Assert.assertEquals(res, expected);
+    }
+
+    @Test
+    public void testL1018BinaryPrefixDivisibleBy5() {
+        int[] nums = {
+            0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1
+        };
+        List<Boolean> res = new L1018BinaryPrefixDivisibleBy5().prefixesDivBy5(nums);
+        List<Boolean> expected =
+                Arrays.asList(
+                        true, false, false, true, true, true, false, false, false, false, false,
+                        false, false, false, false, true, true, false, false, false, false, false,
+                        false, false, false, false, false, false, true);
         Assert.assertEquals(res, expected);
     }
 
