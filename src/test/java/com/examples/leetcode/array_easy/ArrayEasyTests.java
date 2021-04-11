@@ -194,6 +194,14 @@ public class ArrayEasyTests {
     }
 
     @Test
+    public void testL674LongestContinuousIncreasingSubsequence() {
+        int[] nums = {1, 3, 5, 4, 2, 3, 4, 5};
+        int res = new L674LongestContinuousIncreasingSubsequence().findLengthOfLCIS(nums);
+        int expected = 4;
+        Assert.assertEquals(res, expected);
+    }
+
+    @Test
     public void testL661ImageSmoother() {
         int[][] nums = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
         int[][] res = new L661ImageSmoother().imageSmoother(nums);
@@ -313,6 +321,16 @@ public class ArrayEasyTests {
         int[][] queries = {{1, 0}, {-3, 1}, {-4, 0}, {2, 3}};
         int[] res = new L985SumOfEvenNumbersAfterQueries().sumEvenAfterQueries(nums, queries);
         int[] expected = {8, 6, 2, 4};
+        Assert.assertEquals(res, expected);
+    }
+
+    @Test
+    public void testL989AddToArrayFormOfInteger() {
+        int[] num = {9, 9, 9, 9, 9, 9, 9, 9, 9, 9};
+        int k = 1;
+        List<Integer> list = new L989AddToArrayFormOfInteger().addToArrayForm2(num, k);
+        int[] res = list.stream().mapToInt(Integer::intValue).toArray();
+        int[] expected = {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
         Assert.assertEquals(res, expected);
     }
 
