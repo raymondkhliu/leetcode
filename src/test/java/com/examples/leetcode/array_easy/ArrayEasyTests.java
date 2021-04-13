@@ -439,6 +439,20 @@ public class ArrayEasyTests {
     }
 
     @Test
+    public void testL1232CheckIfItIsAStraightLine() {
+        int[][] nums = {
+            {1, 1},
+            {2, 2},
+            {3, 4},
+            {4, 5},
+            {5, 6},
+            {7, 7}
+        };
+        boolean res = new L1232CheckIfItIsAStraightLine().checkStraightLine(nums);
+        Assert.assertEquals(res, false);
+    }
+
+    @Test
     public void testL1252CellsWithOddValuesInAMatrix() {
         int[][] nums = {{0, 1}, {1, 1}};
         int res = new L1252CellsWithOddValuesInAMatrix().oddCells(2, 3, nums);

@@ -1,5 +1,6 @@
 package com.examples.leetcode.array_easy;
 
+/** https://leetcode.com/problems/largest-number-at-least-twice-of-others/ */
 public class L747LargestNumberAtLeastTwiceOfOthers {
 
     public int dominantIndex(int[] nums) {
