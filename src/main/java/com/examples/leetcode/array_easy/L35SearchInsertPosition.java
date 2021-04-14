@@ -4,12 +4,11 @@ import java.util.Arrays;
 
 /** https://leetcode.com/problems/search-insert-position/ */
 public class L35SearchInsertPosition {
-
     public int searchInsert(int[] nums, int target) {
-        int pos = Arrays.binarySearch(nums, target);
-        if (pos < 0) {
-            return -(pos + 1);
+        int position = Arrays.binarySearch(nums, target);
+        if (position < 0) {
+            return -(position + 1);
         }
-        return pos;
+        return position;
     }
 }
