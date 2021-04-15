@@ -114,9 +114,9 @@ public class ArrayEasyTests {
     }
 
     @Test
-    public void testL228SumaryRanges() {
+    public void testL228SummaryRanges() {
         int[] nums = {0, 1, 2, 4, 5, 7};
-        List<String> res = new L228SumaryRanges().summaryRanges(nums);
+        List<String> res = new L228SummaryRanges().summaryRanges(nums);
         List<String> expected = Arrays.asList("0->2", "4->5", "7");
         Assert.assertEquals(res, expected);
     }
