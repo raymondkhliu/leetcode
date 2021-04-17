@@ -665,6 +665,16 @@ public class ArrayEasyTests {
     }
 
     @Test
+    public void testL1566DetectPatternOfLengthMRepeatedKOrMoreTimes() {
+        int[] nums = {2, 2};
+        int m = 1;
+        int k = 2;
+        boolean res =
+                new L1566DetectPatternOfLengthMRepeatedKOrMoreTimes().containsPattern(nums, m, k);
+        Assert.assertEquals(res, true);
+    }
+
+    @Test
     public void testL1560MostVisitedSectorInACircularTrack() {
         int[] nums = {2, 1, 2, 1, 2, 1, 2, 1, 2};
         List<Integer> res = new L1560MostVisitedSectorInACircularTrack().mostVisited(2, nums);
