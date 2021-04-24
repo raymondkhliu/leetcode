@@ -56,7 +56,7 @@ public class ArrayEasyTests {
     public void testL88MergeSortedArray() {
         int[] arr1 = new int[] {1, 2, 3, 0, 0, 0};
         int[] arr2 = new int[] {2, 5, 6};
-        new L88MergeSortedArray().merge(arr1, 3, arr2, 3);
+        new L88MergeSortedArray().merge2(arr1, 3, arr2, 3);
         int[] expected = {1, 2, 2, 3, 5, 6};
         Assert.assertEquals(arr1, expected);
     }
@@ -108,9 +108,9 @@ public class ArrayEasyTests {
 
     @Test
     public void testL219ContainsDuplicate2() {
-        int[] nums = {1, 2, 3, 1};
-        boolean res = new L219ContainsDuplicate2().containsNearbyDuplicate(nums, 3);
-        Assert.assertTrue(res);
+        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        boolean res = new L219ContainsDuplicate2().containsNearbyDuplicate2(nums, 15);
+        Assert.assertFalse(res);
     }
 
     @Test
@@ -191,6 +191,15 @@ public class ArrayEasyTests {
         int[] nums = {1, 2, 3, 4};
         int res = new L628MaximumProductOfThreeNumbers().maximumProduct3(nums);
         Assert.assertEquals(res, 24);
+    }
+
+    @Test
+    public void testL643MaximumAverageSubarrayI() {
+        int[] nums = {1, 12, -5, -6, 50, 3};
+        int k = 4;
+        double res = new L643MaximumAverageSubarrayI().findMaxAverage(nums, k);
+        double expected = 12.75;
+        Assert.assertEquals(res, expected);
     }
 
     @Test
