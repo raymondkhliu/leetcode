@@ -316,6 +316,14 @@ public class ArrayEasyTests {
     }
 
     @Test
+    public void testL914XOfAKindInADeckOfCards() {
+        int[] nums = {1, 1, 2, 2, 2, 2};
+        boolean res = new L914XOfAKindInADeckOfCards().hasGroupsSizeX2(nums);
+        boolean expected = true;
+        Assert.assertEquals(res, expected);
+    }
+
+    @Test
     public void testL922SortArrayByParity2() {
         int[] nums = {4, 2, 5, 7};
         int[] res = new L922SortArrayByParity2().sortArrayByParityII(nums);
