@@ -15,4 +15,19 @@ public class L121BestTimeToBuyAndSellStock {
         }
         return profit;
     }
+
+    public int maxProfit2(int[] prices) {
+        int largest = 0;
+        int buy = prices[0];
+        int current;
+        for (int i = 1; i < prices.length; ++i) {
+            current = prices[i];
+            if (current < buy) {
+                buy = current;
+            } else {
+                largest = Math.max(largest, current - buy);
+            }
+        }
+        return largest;
+    }
 }

@@ -11,7 +11,7 @@ public class ArrayEasyTests {
     @Test
     public void testL1TwoSum() {
         int[] nums = {2, 7, 11, 15};
-        int[] res = new L1TwoSum().twoSum(nums, 9);
+        int[] res = new L1TwoSum().twoSum2(nums, 9);
         int[] expected = {0, 1};
         Assert.assertEquals(res, expected);
     }
@@ -138,9 +138,9 @@ public class ArrayEasyTests {
 
     @Test
     public void testL414ThirdMaxNumber() {
-        int[] nums = {3, 2, 1};
-        int res = new L414ThirdMaxNumber().thirdMax(nums);
-        Assert.assertEquals(res, 1);
+        int[] nums = {1, 2, 2, 5, 3, 5};
+        int res = new L414ThirdMaxNumber().thirdMax2(nums);
+        Assert.assertEquals(res, 2);
     }
 
     @Test
@@ -318,7 +318,7 @@ public class ArrayEasyTests {
     @Test
     public void testL914XOfAKindInADeckOfCards() {
         int[] nums = {1, 1, 2, 2, 2, 2};
-        boolean res = new L914XOfAKindInADeckOfCards().hasGroupsSizeX2(nums);
+        boolean res = new L914XOfAKindInADeckOfCards().hasGroupsSizeX(nums);
         boolean expected = true;
         Assert.assertEquals(res, expected);
     }

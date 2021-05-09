@@ -31,4 +31,36 @@ public class L414ThirdMaxNumber {
         }
         return third;
     }
+
+    public int thirdMax2(int[] nums) {
+        int first = Integer.MIN_VALUE;
+        int second = Integer.MIN_VALUE;
+        int third = Integer.MIN_VALUE;
+        boolean found = false;
+        for (int num : nums) {
+            if (num == Integer.MIN_VALUE) {
+                found = true;
+            }
+            if (num > third && num != second && num != first) {
+                if (num > second) {
+                    third = second;
+                    if (num > first) {
+                        second = first;
+                        first = num;
+                    } else {
+                        second = num;
+                    }
+                } else {
+                    third = num;
+                }
+            }
+        }
+        if (third == Integer.MIN_VALUE) {
+            if (found) {
+                return third;
+            }
+            return first;
+        }
+        return third;
+    }
 }
