@@ -3,7 +3,6 @@ package com.examples.leetcode.array_easy;
 /** https://leetcode.com/problems/can-place-flowers/ */
 public class L605CanPlaceFlowers {
 
-    @SuppressWarnings("PMD")
     public boolean canPlaceFlowers(int[] flowerbed, int n) {
         if (n == 0) {
             return true;

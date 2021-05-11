@@ -1,5 +1,6 @@
 package com.examples.leetcode.array_easy;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -181,9 +182,9 @@ public class ArrayEasyTests {
 
     @Test
     public void testL605CanPlaceFlowers() {
-        int[] nums = {1, 0, 0, 0, 1};
-        boolean res = new L605CanPlaceFlowers().canPlaceFlowers(nums, 1);
-        Assert.assertTrue(res);
+        int[] nums = {1, 0, 0, 0, 0, 1};
+        boolean res = new L605CanPlaceFlowers().canPlaceFlowers(nums, 2);
+        Assert.assertFalse(res);
     }
 
     @Test
@@ -426,6 +427,14 @@ public class ArrayEasyTests {
     }
 
     @Test
+    public void testL1128NumberOfEquivalentDominoPairs() {
+        int[][] arr1 = {{1, 2}, {1, 2}, {1, 1}, {1, 2}, {2, 2}};
+        int res = new L1128NumberOfEquivalentDominoPairs().numEquivDominoPairs(arr1);
+        int expected = 3;
+        Assert.assertEquals(res, expected);
+    }
+
+    @Test
     public void testL1160FindWordsThatCanBeFormedByCharacters() {
         String[] words = {"cat", "bt", "hat", "tree"};
         String chars = "atach";
@@ -608,6 +617,14 @@ public class ArrayEasyTests {
     }
 
     @Test
+    public void testL1437CheckIfAll1sAreAtLeastLengthKPlacesAway() {
+        int[] nums = {1, 0, 0, 1, 0, 1};
+        boolean res = new L1437CheckIfAll1sAreAtLeastLengthKPlacesAway().kLengthApart(nums, 2);
+        boolean expected = false;
+        Assert.assertEquals(res, expected);
+    }
+
+    @Test
     public void testL1450NumberOfStudentsDoingHomework() {
         int[] startTime = {1, 2, 3};
         int[] endTime = {3, 2, 7};
@@ -777,5 +794,17 @@ public class ArrayEasyTests {
         int[][] nums = {{1, 2, 3}, {3, 2, 1}};
         int res = new L1672RichestCustomerWealth().richestCustomer(nums);
         Assert.assertEquals(res, 6);
+    }
+
+    @Test
+    public void testL1773CountItemsMatchingARule() {
+        List<List<String>> list = new ArrayList<>();
+        list.add(Arrays.asList("phone", "blue", "pixel"));
+        list.add(Arrays.asList("computer", "silver", "phone"));
+        list.add(Arrays.asList("phone", "gold", "iphone"));
+        String ruleKey = "type";
+        String ruleValue = "phone";
+        int res = new L1773CountItemsMatchingARule().countMatches(list, ruleKey, ruleValue);
+        Assert.assertEquals(res, 2);
     }
 }
