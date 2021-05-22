@@ -326,6 +326,13 @@ public class ArrayEasyTests {
 
     @Test
     public void testL922SortArrayByParity2() {
+        int[] nums = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        boolean res = new L941ValidMountainArray().validMountainArray(nums);
+        Assert.assertEquals(res, false);
+    }
+
+    @Test
+    public void testL941ValidMountainArray() {
         int[] nums = {4, 2, 5, 7};
         int[] res = new L922SortArrayByParity2().sortArrayByParityII(nums);
         int[] expected = {4, 5, 2, 7};
@@ -794,6 +801,21 @@ public class ArrayEasyTests {
         int[][] nums = {{1, 2, 3}, {3, 2, 1}};
         int res = new L1672RichestCustomerWealth().richestCustomer(nums);
         Assert.assertEquals(res, 6);
+    }
+
+    @Test
+    public void testL1700NumberOfStudentsUnableToEatLunch() {
+        int[] students = {1, 1, 0, 0};
+        int[] sandwiches = {0, 1, 0, 1};
+        int res = new L1700NumberOfStudentsUnableToEatLunch().countStudents(students, sandwiches);
+        Assert.assertEquals(res, 0);
+    }
+
+    @Test
+    public void testL1732FindTheHighestAltitude() {
+        int[] gain = {-5, 1, 5, 0, -7};
+        int res = new L1732FindTheHighestAltitude().largestAltitude(gain);
+        Assert.assertEquals(res, 1);
     }
 
     @Test
