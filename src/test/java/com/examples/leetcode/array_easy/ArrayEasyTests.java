@@ -819,6 +819,28 @@ public class ArrayEasyTests {
     }
 
     @Test
+    public void testL1742MaximumNumberOfBallsInABox() {
+        int lowLimit = 1780;
+        int highLimit = 3875;
+        int res = new L1742MaximumNumberOfBallsInABox().countBalls(lowLimit, highLimit);
+        Assert.assertEquals(res, 161);
+    }
+
+    @Test
+    public void testL1748SumOfUniqueElements() {
+        int[] nums = {1, 2, 3, 4, 5};
+        int res = new L1748SumOfUniqueElements().sumOfUnique(nums);
+        Assert.assertEquals(res, 15);
+    }
+
+    @Test
+    public void testL1752CheckIfArrayIsSortedAndRotated() {
+        int[] nums = {2, 1, 3, 4};
+        boolean res = new L1752CheckIfArrayIsSortedAndRotated().check(nums);
+        Assert.assertEquals(res, false);
+    }
+
+    @Test
     public void testL1773CountItemsMatchingARule() {
         List<List<String>> list = new ArrayList<>();
         list.add(Arrays.asList("phone", "blue", "pixel"));
