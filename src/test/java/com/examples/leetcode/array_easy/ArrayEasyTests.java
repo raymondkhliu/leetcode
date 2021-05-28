@@ -841,6 +841,13 @@ public class ArrayEasyTests {
     }
 
     @Test
+    public void L1758MinimumChangesToMakeAlternatingBinaryString() {
+        String nums = "10010100";
+        int res = new L1758MinimumChangesToMakeAlternatingBinaryString().minOperations(nums);
+        Assert.assertEquals(res, 3);
+    }
+
+    @Test
     public void testL1773CountItemsMatchingARule() {
         List<List<String>> list = new ArrayList<>();
         list.add(Arrays.asList("phone", "blue", "pixel"));
@@ -850,5 +857,38 @@ public class ArrayEasyTests {
         String ruleValue = "phone";
         int res = new L1773CountItemsMatchingARule().countMatches(list, ruleKey, ruleValue);
         Assert.assertEquals(res, 2);
+    }
+
+    @Test
+    public void testL1779FindNearestPointThatHasTheSameXOrYCoordinate() {
+        int x = 3;
+        int y = 4;
+        int[][] points = {
+            {1, 2},
+            {3, 1},
+            {2, 4},
+            {2, 3},
+            {4, 4}
+        };
+        int res =
+                new L1779FindNearestPointThatHasTheSameXOrYCoordinate()
+                        .nearestValidPoint(x, y, points);
+        Assert.assertEquals(res, 2);
+    }
+
+    @Test
+    public void testL1827MinimumOperationsToMakeTheArrayIncreasing() {
+        int[] nums = {1, 5, 2, 4, 1};
+        int res = new L1827MinimumOperationsToMakeTheArrayIncreasing().minOperations(nums);
+        Assert.assertEquals(res, 14);
+    }
+
+    @Test
+    public void testL1848MinimumDistanceToTheTargetElement() {
+        int target = 1;
+        int start = 0;
+        int[] nums = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+        int res = new L1848MinimumDistanceToTheTargetElement().getMinDistance(nums, target, start);
+        Assert.assertEquals(res, 0);
     }
 }
