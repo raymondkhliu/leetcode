@@ -1,5 +1,6 @@
 package com.examples.leetcode.array_easy;
 
+/** https://leetcode.com/problems/minimum-changes-to-make-alternating-binary-string/ */
 public class L1758MinimumChangesToMakeAlternatingBinaryString {
     public int minOperations(String s) {
         char[] nums = s.toCharArray();

@@ -1,5 +1,6 @@
 package com.examples.leetcode.array_easy;
 
+/** https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/ */
 public class L1700NumberOfStudentsUnableToEatLunch {
     public int countStudents(int[] students, int[] sandwiches) {
         int square = 0;

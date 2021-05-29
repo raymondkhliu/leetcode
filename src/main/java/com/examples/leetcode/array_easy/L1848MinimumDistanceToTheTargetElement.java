@@ -1,5 +1,6 @@
 package com.examples.leetcode.array_easy;
 
+/** https://leetcode.com/problems/minimum-distance-to-the-target-element */
 public class L1848MinimumDistanceToTheTargetElement {
     public int getMinDistance(int[] nums, int target, int start) {
         if (nums[start] == target) {

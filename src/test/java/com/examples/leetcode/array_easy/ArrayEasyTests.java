@@ -891,4 +891,18 @@ public class ArrayEasyTests {
         int res = new L1848MinimumDistanceToTheTargetElement().getMinDistance(nums, target, start);
         Assert.assertEquals(res, 0);
     }
+
+    @Test
+    public void testL1854MaximumPopulationYear() {
+        int[][] logs = {{1993, 1999}, {2000, 2010}};
+        int res = new L1854MaximumPopulationYear().maximumPopulation(logs);
+        Assert.assertEquals(res, 1993);
+    }
+
+    @Test
+    public void testL1869LongerContiguousSegmentsOfOnesThanZeros() {
+        String s = "1110001";
+        boolean res = new L1869LongerContiguousSegmentsOfOnesThanZeros().checkZeroOnes(s);
+        Assert.assertEquals(res, false);
+    }
 }

@@ -1,5 +1,6 @@
 package com.examples.leetcode.array_easy;
 
+/** https://leetcode.com/problems/minimum-operations-to-make-the-array-increasing/ */
 public class L1827MinimumOperationsToMakeTheArrayIncreasing {
     public int minOperations(int[] nums) {
         int count = 0;
