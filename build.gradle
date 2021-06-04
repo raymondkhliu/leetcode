@@ -7,7 +7,7 @@ plugins {
 group "com.examples"
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 idea {
