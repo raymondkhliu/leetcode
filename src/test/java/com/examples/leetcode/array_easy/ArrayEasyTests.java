@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -55,10 +56,17 @@ public class ArrayEasyTests {
 
     @Test
     public void testL88MergeSortedArray() {
-        int[] arr1 = new int[] {1, 2, 3, 0, 0, 0};
-        int[] arr2 = new int[] {2, 5, 6};
+        int[] arr1 = new int[]{1, 2, 3, 0, 0, 0};
+        int[] arr2 = new int[]{2, 5, 6};
         new L88MergeSortedArray().merge2(arr1, 3, arr2, 3);
         int[] expected = {1, 2, 2, 3, 5, 6};
+        Assert.assertEquals(arr1, expected);
+    }
+
+    @Test
+    public void testL108ConvertSortedArrayToBinarySearchTree() {
+        int[] arr1 = {-10, -3, 0, 5, 9};
+        int[] expected = {0,-3,9,-10,5};
         Assert.assertEquals(arr1, expected);
     }
 
@@ -266,9 +274,9 @@ public class ArrayEasyTests {
         String s = "abcdddeeeeaabbbcd";
         List<List<Integer>> res = new L830PositionsOfLargeGroups().largeGroupPositions(s);
         int[][] expected = {
-            {3, 5},
-            {6, 9},
-            {12, 14}
+                {3, 5},
+                {6, 9},
+                {12, 14}
         };
         for (int i = 0; i < res.size(); ++i) {
             int[] row = res.get(i).stream().mapToInt(Integer::intValue).toArray();
@@ -369,10 +377,10 @@ public class ArrayEasyTests {
     @Test
     public void testL999AvailableCapturesForRook() {
         char[][] nums = {
-            {'.', '.', '.', '.', '.', '.', '.', '.'}, {'.', '.', '.', 'p', '.', '.', '.', '.'},
-            {'.', '.', '.', 'R', '.', '.', '.', 'p'}, {'.', '.', '.', '.', '.', '.', '.', '.'},
-            {'.', '.', '.', '.', '.', '.', '.', '.'}, {'.', '.', '.', 'p', '.', '.', '.', '.'},
-            {'.', '.', '.', '.', '.', '.', '.', '.'}, {'.', '.', '.', '.', '.', '.', '.', '.'}
+                {'.', '.', '.', '.', '.', '.', '.', '.'}, {'.', '.', '.', 'p', '.', '.', '.', '.'},
+                {'.', '.', '.', 'R', '.', '.', '.', 'p'}, {'.', '.', '.', '.', '.', '.', '.', '.'},
+                {'.', '.', '.', '.', '.', '.', '.', '.'}, {'.', '.', '.', 'p', '.', '.', '.', '.'},
+                {'.', '.', '.', '.', '.', '.', '.', '.'}, {'.', '.', '.', '.', '.', '.', '.', '.'}
         };
         int res = new L999AvailableCapturesForRook().numRookCaptures(nums);
         Assert.assertEquals(res, 3);
@@ -398,7 +406,7 @@ public class ArrayEasyTests {
     @Test
     public void testL1018BinaryPrefixDivisibleBy5() {
         int[] nums = {
-            0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1
+                0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1
         };
         List<Boolean> res = new L1018BinaryPrefixDivisibleBy5().prefixesDivBy5(nums);
         List<Boolean> expected =
@@ -474,12 +482,12 @@ public class ArrayEasyTests {
     @Test
     public void testL1232CheckIfItIsAStraightLine() {
         int[][] nums = {
-            {1, 1},
-            {2, 2},
-            {3, 4},
-            {4, 5},
-            {5, 6},
-            {7, 7}
+                {1, 1},
+                {2, 2},
+                {3, 4},
+                {4, 5},
+                {5, 6},
+                {7, 7}
         };
         boolean res = new L1232CheckIfItIsAStraightLine().checkStraightLine(nums);
         Assert.assertEquals(res, false);
@@ -557,7 +565,7 @@ public class ArrayEasyTests {
     @Test
     public void testL1337TheKWeakestRowsInAMatrix() {
         int[][] nums = {
-            {1, 1, 0, 0, 0}, {1, 1, 1, 1, 0}, {1, 0, 0, 0, 0}, {1, 1, 0, 0, 0}, {1, 1, 1, 1, 1}
+                {1, 1, 0, 0, 0}, {1, 1, 1, 1, 0}, {1, 0, 0, 0, 0}, {1, 1, 0, 0, 0}, {1, 1, 1, 1, 1}
         };
         int[] res = new L1337TheKWeakestRowsInAMatrix().kWeakestRows(nums, 3);
         int[] expected = {2, 0, 3};
@@ -864,11 +872,11 @@ public class ArrayEasyTests {
         int x = 3;
         int y = 4;
         int[][] points = {
-            {1, 2},
-            {3, 1},
-            {2, 4},
-            {2, 3},
-            {4, 4}
+                {1, 2},
+                {3, 1},
+                {2, 4},
+                {2, 3},
+                {4, 4}
         };
         int res =
                 new L1779FindNearestPointThatHasTheSameXOrYCoordinate()
@@ -904,5 +912,20 @@ public class ArrayEasyTests {
         String s = "1110001";
         boolean res = new L1869LongerContiguousSegmentsOfOnesThanZeros().checkZeroOnes(s);
         Assert.assertEquals(res, false);
+    }
+
+    @Test
+    public void testL1920BuildArrayFromPermutation() {
+        int[] nums = {0, 2, 1, 5, 3, 4};
+        int[] res = new L1920BuildArrayFromPermutation().buildArray(nums);
+        int[] expected = {0, 1, 2, 4, 5, 3};
+        Assert.assertEquals(res, expected);
+    }
+
+    @Test
+    public void testL2011FinalValueOfVariableAfterPerformingOperations() {
+        String[] s = {"--X", "X++", "X++"};
+        int res = new L2011FinalValueOfVariableAfterPerformingOperations().finalValueAfterOperations(s);
+        Assert.assertEquals(res, 1);
     }
 }
